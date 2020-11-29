@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "workspaces": [
+    "example",
+    "spotifyjs"
+  ],
+  "scripts": {
+    "build": "yarn build:package && yarn build:example",
+    "build:example": "yarn workspace example package",
+    "build:package": "yarn workspace @soubai/spotifyjs build",
+    "bump": "yarn workspace @soubai/spotifyjs bump",
+    "develop": "yarn watch",
+    "watch": "concurrently -n Hook,Example \"yarn watch:package\" \"yarn watch:example\"",
+    "watch:example": "yarn workspace example develop",
+    "watch:package": "yarn workspace @soubai/spotifyjs watch"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "license": "MIT"
+}

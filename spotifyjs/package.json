@@ -1,0 +1,44 @@
+{
+  "name": "@soubai/spotifyjs",
+  "version": "1.0.0",
+  "description": "Spotify.js is Universal wrapper for Spotify web API",
+  "author": {
+    "name": "Abderrahim SOUBAI-ELIDRISI",
+    "url": "https://twitter.com/soub4i"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "query",
+    "spotify",
+    "api",
+    "vue",
+    "plugin",
+    "react-hooks"
+  ],
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir ./dist",
+    "bump": "npm version",
+    "example": "cd example && yarn install && yarn package",
+    "prepublishOnly": "yarn build",
+    "watch": "nodemon --watch src --exec \"yarn build\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "nodemon": "^2.0.6",
+    "prettier": "2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbderrahimSoubaiElidrissi/spotify-js"
+  },
+  "bugs": {
+    "url": "https://github.com/AbderrahimSoubaiElidrissi/spotify-js/issues"
+  },
+  "private": true
+}
